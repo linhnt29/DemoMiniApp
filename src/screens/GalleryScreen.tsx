@@ -1,5 +1,6 @@
 import React from 'react';
-import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {Button, Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {DemoNativeModule} from 'demo-native-modules';
 
 const data = Array(10)
   .fill('')
@@ -20,6 +21,13 @@ const Row = ({title}: {title: string}) => (
 const GalleryScreen = () => {
   return (
     <ScrollView style={styles.container}>
+      <Button
+        color="rgba(127, 103, 190, 1)"
+        title="Show Toast"
+        onPress={() => {
+          DemoNativeModule.showToast();
+        }}
+      />
       {data.map(title => (
         <React.Fragment key={title}>
           <Row title={title} />

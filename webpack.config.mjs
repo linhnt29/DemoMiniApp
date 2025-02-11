@@ -97,6 +97,9 @@ export default env => {
       // alias: {
       //   'react-native': reactNativePath,
       // },
+      alias: {
+        'demo-native-modules': path.resolve(path.dirname(new URL(import.meta.url).pathname), '../host-app/src/native-module'),
+      },
     },
     /**
      * Configures output.
