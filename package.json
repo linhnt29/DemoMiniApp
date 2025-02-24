@@ -13,9 +13,12 @@
     "lint": "eslint .",
     "start": "react-native webpack-start --port 9000",
     "start:standalone": "STANDALONE=1 react-native webpack-start",
-    "test": "jest"
+    "test": "jest",
+    "bundle:android": "NODE_ENV=production; npx react-native webpack-bundle --platform android --entry-file index.js",
+    "bundle:ios": "NODE_ENV=production; npx react-native webpack-bundle --platform ios --entry-file index.js"
   },
   "dependencies": {
+    "@react-native-masked-view/masked-view": "^0.3.2",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
     "react": "18.2.0",

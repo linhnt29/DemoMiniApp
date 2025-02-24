@@ -114,7 +114,7 @@ export default env => {
       path: path.join(dirname, 'build/generated', platform),
       filename: 'index.bundle',
       chunkFilename: '[name].chunk.bundle',
-      publicPath: Repack.getPublicPath({platform, devServer}),
+      publicPath: Repack.getPublicPath({ platform, devServer }),
     },
     /**
      * Configures optimization of the built bundle.
@@ -273,6 +273,11 @@ export default env => {
             requiredVersion: '3.20.0',
           },
         },
+      }),
+      new Repack.plugins.CodeSigningPlugin({
+        enabled: process.env.NODE_ENV === 'production',
+        privateKeyPath: path.join('..', '..', 'code-signing.pem'),
+        outputPath: path.join('build', 'outputs', platform, 'remotes'),
       }),
     ],
   };
