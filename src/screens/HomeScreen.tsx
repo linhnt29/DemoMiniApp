@@ -9,7 +9,7 @@ const HomeScreen = () => {
   const navigation = useNavigation<MainStackNavigationProp>();
 
   useEffect(() => {
-    Alert.alert("moment version" + ' - ' + moment.version)
+    Alert.alert("MiniApp1" + ' - ' + moment.version)
   }, [])
 
   return (

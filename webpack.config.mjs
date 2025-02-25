@@ -237,7 +237,7 @@ export default env => {
         },
       }),
       new Repack.plugins.ModuleFederationPlugin({
-        name: 'MiniApp',
+        name: 'MiniApp1',
         exposes: {
           './MiniAppNavigator': './src/navigation/MainNavigator',
         },
@@ -273,7 +273,7 @@ export default env => {
             requiredVersion: '3.20.0',
           },
           'moment': {
-            singleton: true,
+            singleton: false,
             eager: STANDALONE,
           },
           
