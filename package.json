@@ -18,12 +18,19 @@
     "bundle:ios": "NODE_ENV=production; npx react-native webpack-bundle --platform ios --entry-file index.js"
   },
   "dependencies": {
+    "@gorhom/bottom-sheet": "^5.1.1",
     "@react-native-masked-view/masked-view": "^0.3.2",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
+    "dayjs": "^1.11.13",
+    "i18next": "^24.2.2",
+    "moment": "^2.30.1",
     "react": "18.2.0",
+    "react-i18next": "^15.4.1",
     "react-native": "^0.72.3",
-    "react-native-safe-area-context": "^4.5.0",
+    "react-native-calendars": "^1.1309.1",
+    "react-native-hole-view": "^3.0.0-alpha4",
+    "react-native-safe-area-context": "^5.2.0",
     "react-native-screens": "^3.20.0"
   },
   "devDependencies": {

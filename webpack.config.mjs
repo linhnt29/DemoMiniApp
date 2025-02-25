@@ -279,6 +279,11 @@ export default env => {
         privateKeyPath: path.join('..', '..', 'code-signing.pem'),
         outputPath: path.join('build', 'outputs', platform, 'remotes'),
       }),
+      new Repack.plugins.ChunksToHermesBytecodePlugin({
+        enabled: true,
+        test: /\.(js)?bundle$/,
+        exclude: /index.bundle$/,
+      }),
     ],
   };
 };
