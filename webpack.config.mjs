@@ -273,7 +273,7 @@ export default env => {
             requiredVersion: '3.20.0',
           },
           'moment': {
-            singleton: false,
+            singleton: true,
             eager: STANDALONE,
           },
           
