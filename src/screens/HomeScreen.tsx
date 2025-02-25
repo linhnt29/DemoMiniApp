@@ -1,10 +1,16 @@
-import {useNavigation} from '@react-navigation/native';
-import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
-import {MainStackNavigationProp} from '../navigation/MainNavigator';
+import { useNavigation } from '@react-navigation/native';
+import React, { useEffect } from 'react';
+import { Alert, Button, StyleSheet, Text, View } from 'react-native';
+import { MainStackNavigationProp } from '../navigation/MainNavigator';
+import moment from "moment"
+
 
 const HomeScreen = () => {
   const navigation = useNavigation<MainStackNavigationProp>();
+
+  useEffect(() => {
+    Alert.alert("moment version" + ' - ' + moment.version)
+  }, [])
 
   return (
     <View style={styles.container}>

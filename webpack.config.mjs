@@ -272,6 +272,35 @@ export default env => {
             eager: STANDALONE,
             requiredVersion: '3.20.0',
           },
+          'moment': {
+            singleton: true,
+            eager: STANDALONE,
+          },
+          
+          '@gorhom/bottom-sheet': {
+            singleton: true,
+            eager: STANDALONE,
+          },
+          'dayjs': {
+            singleton: true,
+            eager: STANDALONE,
+          },
+          'i18next': {
+            singleton: true,
+            eager: true,
+          },
+          'react-i18next': {
+            singleton: true,
+            eager: STANDALONE,
+          },
+          'react-native-calendars': {
+            singleton: true,
+            eager: STANDALONE,
+          },
+          'react-native-hole-view': {
+            singleton: true,
+            eager: STANDALONE,
+          },
         },
       }),
       new Repack.plugins.CodeSigningPlugin({

@@ -15,7 +15,8 @@
     "start:standalone": "STANDALONE=1 react-native webpack-start",
     "test": "jest",
     "bundle:android": "NODE_ENV=production; npx react-native webpack-bundle --platform android --entry-file index.js",
-    "bundle:ios": "NODE_ENV=production; npx react-native webpack-bundle --platform ios --entry-file index.js"
+    "bundle:ios": "NODE_ENV=production; npx react-native webpack-bundle --platform ios --entry-file index.js",
+    "reinstall": "rm -rf node_modules; yarn"
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^5.1.1",
@@ -24,7 +25,7 @@
     "@react-navigation/native-stack": "^6.9.12",
     "dayjs": "^1.11.13",
     "i18next": "^24.2.2",
-    "moment": "^2.30.1",
+    "moment": "2.30.1",
     "react": "18.2.0",
     "react-i18next": "^15.4.1",
     "react-native": "^0.72.3",
