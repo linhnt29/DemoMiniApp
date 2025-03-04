@@ -237,7 +237,7 @@ export default env => {
         },
       }),
       new Repack.plugins.ModuleFederationPlugin({
-        name: 'MiniApp1',
+        name: 'corp',
         exposes: {
           './MiniAppNavigator': './src/navigation/MainNavigator',
         },
